@@ -10,8 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/blogs", blogRouter);
 
 //configure mongoose
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/CRUD",
+mongoose.connect("mongodb+srv://satishpawar:satishpawar@cluster0.rmit4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -26,7 +25,7 @@ mongoose.connect(
 );
 
 app.listen(3001, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port 3001`);
 });
 
 module.exports = app;
