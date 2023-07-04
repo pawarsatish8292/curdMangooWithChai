@@ -7,12 +7,6 @@ chai.should();
 
 chai.use(chaiHttp);
 
-describe("Blogs", () => {
-  beforeEach((done) => {
-    Blog.deleteMany({}, (err) => {
-      done();
-    });
-  });
 
   describe("Blogs", () => {
     beforeEach((done) => {
