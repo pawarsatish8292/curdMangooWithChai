@@ -13,6 +13,13 @@ describe("Blogs", () => {
       done();
     });
   });
+
+  describe("Blogs", () => {
+    beforeEach((done) => {
+      Blog.deleteMany({}, (err) => {
+        done();
+      });
+    });
   describe("/GET blog", () => {
     it("it should GET all the blogs", (done) => {
       chai
